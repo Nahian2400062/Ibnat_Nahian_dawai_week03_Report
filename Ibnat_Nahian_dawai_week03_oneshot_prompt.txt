@@ -1,0 +1,158 @@
+﻿Research Question: Is there a relationship between income level and trust?
+Report Plan: (Duo Huang, Nahian Ibnat)
+1. Introduction
+1.1 Hypothesis
+1.2 Data Source
+2. Data Description
+Variables:
+Control Variables
+Social Values (Q1-Q45)
+Perception of Corruption (Q112-120)
+Perception of Security (Q131-151)
+Ethical Values (Q176-198)
+ Research Design
+LHS variables:
+Trust (Trust of Relationship) (Q58 - Q63)
+Trust (Trust of Institutions) (Q64 - Q78)
+RHS variable:
+Income (Q288R)
+
+
+ Data Rebuilt
+Get the average of Trust and then divide them into five groups ( )
+Divide by SD and add them up (Summation)——PCA
+ 
+Table 1. Summary Statistics
+Graph 1. Income Distribution Bar Chart
+Graph 2. Trust of Relationship Bar Chart
+Graph 3. Trust of Institutions Bar Chart
+ 3. Data Analysis
+3.1 Regression Models
+Combine Trust ~ a + b.Income + Control Variables + e
+Table 2. OLS Regression Result
+Graph 4. Scatterplot of Trust and Income (add Trend Line)
+3.2 Regression Models
+Trust of Relationship ~ a + b.Income + Control Variables + e
+Table 3. OLS Regression Result
+Graph 5. Scatterplot of Trust and Income (add Trend Line)
+3.3 Regression Models
+Trust of Institutions ~ a + b.Income + Control Variables + e
+Table 4. OLS Regression Result
+Graph 6. Scatterplot of Trust and Income (add Trend Line)
+4. Results
+5. Further Discussion
+5.1 Robustness
+5.2 Heterogeneity
+6. Conclusion
+ Report By AI
+1. Introduction
+Trust plays a central role in societal interactions, affecting everything from interpersonal relationships to institutional effectiveness. This report investigates whether there is a relationship between income level and trust. In our study, we examine two dimensions of trust:
+* Trust in Personal Relationships (averaged from survey items Q58–Q63)
+* Trust in Institutions (averaged from survey items Q64–Q78)
+The income variable (measured by Q288R) serves as our main predictor, and we also control for other socioeconomic factors such as social values (Q1–Q45), perceptions of corruption (Q112–Q120), perceptions of security (Q131–Q151), and ethical values (Q176–Q198).
+________________
+
+
+2. Hypothesis
+We hypothesize that higher income is associated with higher levels of trust. Specifically, individuals with greater economic well-being (as measured by Q288R) are expected to have:
+* Higher trust in personal relationships, and/or
+* Higher confidence in institutions.
+________________
+
+
+3. Data Source and Data Description
+3.1 Data Source
+The analysis is based on the World Values Survey data merged with national income indicators (GDP and related measures). The survey covers several dimensions including social values, corruption, security, and ethical norms.
+3.2 Variable Construction
+* Income (Q288R): Respondents’ reported income level or satisfaction.
+* Trust of Relationship: Computed as the average of survey items Q58–Q63.
+* Trust of Institutions: Computed as the average of survey items Q64–Q78.
+* Overall Trust: (Optional) Could be derived as the average of the two trust dimensions.
+* Control Variables: Additional controls include measures from social values, perceptions of corruption, perceptions of security, and ethical values.
+In our analysis, we rebuilt the trust measures by calculating the average scores and, when needed, grouping them into five categories after standardizing by the standard deviation. In some cases, principal component analysis (PCA) was applied to derive a composite trust index.
+4. Descriptive Statistics and Visualizations
+Table 1. Summary Statistics
+  
+
+Graph 1. Income Distribution Bar Chart
+  
+
+Description:
+This bar chart displays the distribution of income levels (Q288R). The majority of respondents fall within the low-to-middle income ranges, with fewer observations at the higher end.
+
+
+Graph 2. Trust of Relationship Distribution
+  
+
+Description:
+A bar chart showing the frequency distribution of the composite trust score for relationships (Q58–Q63). The distribution appears approximately normal, centered around 2.45.
+Graph 3. Trust of Institutions Distribution
+  
+
+Description:
+A bar chart that shows the distribution of institutional trust (Q64–Q78). The central tendency is around 2.55, with a similar spread as the trust of relationship variables.
+5. Data Analysis
+5.1 Regression Models
+We adopt an observational design using OLS regression to examine the relationship between income and trust. Our regression models are specified as follows:
+For simplicity, the regression outputs presented below currently include only the income variable and an intercept. (Additional control variables and GDP are included in the full model specification; please incorporate these as needed.)
+5.1.1 Overall Trust Model (Optional)
+If overall trust is computed as the average of relationship and institutional trust.
+​
+Table 2. OLS Regression Results – Overall Trust
+(This table is not shown below since our primary results include the two dimensions separately.)
+5.1.2 Trust of Relationship Model
+​
+Table 2. OLS Regression Results – Trust in Personal Relationships
+  
+
+Interpretation:
+The negative coefficient (–4.41e-06) indicates that, holding other factors constant, a one-unit increase in income (Q288R) is associated with a very small decrease in trust in personal relationships. Despite the small magnitude (which might be due to the scaling of the income variable), the relationship is statistically significant (p < 0.001).
+Graph 4. Scatterplot of Trust in Relationships vs. Income
+  
+
+Description:
+This scatterplot plots Trust in Relationships (Y-axis) against Income (Q288R; X-axis). A red trend line is overlaid, illustrating the negative relationship observed in the regression. Points are optionally colored by GDP_USD_PPP_per_capita to show the macroeconomic context.
+5.1.3 Trust of Institutions Model
+​
+Table 3. OLS Regression Results – Trust in Institutions
+  
+
+Interpretation:
+For trust in institutions, the coefficient is nearly zero and statistically insignificant (p = 0.828). This suggests that income (Q288R) does not have a meaningful linear relationship with trust in institutions in our sample.
+Graph 5. Scatterplot of Trust in Institutions vs. Income
+  
+
+Description:
+This scatterplot shows Trust in Institutions on the Y-axis versus Income on the X-axis. The trend line is almost flat, corroborating the regression results that indicate no significant relationship between income and institutional trust.
+6. Results
+The regression analyses yield mixed results:
+* Trust in Personal Relationships:
+There is a statistically significant negative relationship with income, although the effect size is very small. This finding might be counterintuitive given the expectation that higher income should correlate with higher interpersonal trust.
+* Trust in Institutions:
+No statistically significant relationship is observed between income and institutional trust.
+These results indicate that while income may play a modest role in shaping interpersonal trust, it does not appear to be a strong predictor of trust in institutions.
+________________
+
+
+7. Further Discussion
+7.1 Robustness
+   * Alternative Specifications:
+Future analyses should consider re-scaling the income variable (e.g., converting to thousands of dollars) to assess whether the coefficient magnitude changes in a meaningful way.
+   * Additional Controls:
+Incorporating additional control variables (e.g., education, employment status, and measures of inequality) may help clarify the observed relationships.
+   * Non-linear Effects:
+It might be worthwhile to explore non-linear models or interaction effects to capture potential threshold effects in the income–trust relationship.
+7.2 Heterogeneity
+      * Subgroup Analyses:
+Investigate whether the relationship between income and trust varies across different regions, income groups, or cultural contexts.
+      * Differential Impacts:
+The divergence between personal and institutional trust suggests that other societal factors (such as political stability or social norms) may moderate how income influences trust.
+________________
+
+
+8. Conclusion
+This report set out to determine whether income is related to trust, using OLS regressions on data from the World Values Survey. Our analysis reveals that:
+         * There is a statistically significant, albeit very small, negative association between income and trust in personal relationships.
+         * No significant relationship is found between income and trust in institutions.
+These findings challenge the straightforward assumption that higher income necessarily fosters greater trust. Instead, they underscore the complexity of social trust, suggesting that other factors—such as cultural values, institutional performance, or inequality—might be more decisive in shaping trust levels.
+Further research should refine the measurement scales, incorporate a broader range of controls, and examine potential non-linearities to better understand the nuanced dynamics between income and trust.

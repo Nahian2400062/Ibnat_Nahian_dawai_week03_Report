@@ -1,6 +1,6 @@
 # Ibnat_Nahian_dawai_week03_Report
 
-# README: Relationship Between Income Satisfaction and Institutional Trust
+Relationship Between Income Satisfaction and Institutional Trust
 
 ## **Dataset Information**
 - Dataset Name: WVS_GDP_Merged_Data.csv
